@@ -8,6 +8,11 @@
 a, a:hover {
   color:#999999;
 }
+
+#footer ul a {
+  color:#999999;
+}
+
 H1, h1 {
   color: #333333;
 }
