@@ -1,8 +1,5 @@
 <?php
 	$t_item = $this->getVar("item");
-	$va_comments = $this->getVar("comments");
-	$vn_comments_enabled = 	$this->getVar("commentsEnabled");
-	$vn_share_enabled = 	$this->getVar("shareEnabled");	
 ?>
 <div class="row">
 	<div class='col-xs-12 navTop'><!--- only shown at small screen size -->
@@ -19,6 +16,7 @@
 				<div class='col-md-12 col-lg-12'>
 					<H4>{{{^ca_entities.preferred_labels.displayname}}}</H4>
 {{{^ca_entities.lifespan}}}<br>
+{{{^ca_entities.nationality}}}<br>
 {{{<ifdef code="ca_entities.homepage"><div class='unit'><a href="^ca_entities.homepage">artist website</a></div></ifdef>}}}
 <br>
 				</div><!-- end col -->
@@ -26,23 +24,6 @@
 			<div class="row">			
 				<div class='col-sm-6 col-md-6 col-lg-6'>
 					{{{<ifcount code="ca_objects" min="1" max="1"><div class='unit'><unit relativeTo="ca_objects" delimiter=" "><l>^ca_object_representations.media.large</l><div class='caption'><l>^ca_objects.preferred_labels.name</l></div></unit></div></ifcount>}}}
-<?php
-				# Comment and Share Tools
-				if ($vn_comments_enabled | $vn_share_enabled) {
-						
-					print '<div id="detailTools">';
-					if ($vn_comments_enabled) {
-?>				
-						<div class="detailTool"><a href='#' onclick='jQuery("#detailComments").slideToggle(); return false;'><span class="glyphicon glyphicon-comment"></span>Comments (<?php print sizeof($va_comments); ?>)</a></div><!-- end detailTool -->
-						<div id='detailComments'><?php print $this->getVar("itemComments");?></div><!-- end itemComments -->
-<?php				
-					}
-					if ($vn_share_enabled) {
-						print '<div class="detailTool"><span class="glyphicon glyphicon-share-alt"></span>'.$this->getVar("shareLink").'</div><!-- end detailTool -->';
-					}
-					print '</div><!-- end detailTools -->';
-				}				
-?>
 					
 				</div><!-- end col -->
 				<div class='col-sm-6 col-md-6 col-lg-6'>

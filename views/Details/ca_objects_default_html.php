@@ -56,8 +56,9 @@
 							{{{<unit relativeTo="ca_objects_x_entities" delimiter="<br/>"><unit relativeTo="ca_entities"><l>^ca_entities.preferred_labels</l></unit></unit>}}}
 				<p>{{{<unit>^ca_objects.type_id</unit>}}}</p>
 				{{{<ifdef code ="ca_objects.medium">^ca_objects.medium<br></ifdef}}}
+				{{{<ifdef code ="ca_objects.edition">Edition: ^ca_objects.edition<br></ifdef}}}
 				{{{<ifdef code ="ca_objects.provenance">Provenance: ^ca_objects.provenance<br></ifdef}}}
-				{{{<ifdef code ="ca_objects.acquisition_year">Acquired ^ca_objects.acquisition_year<br></ifdef}}}
+				{{{<ifdef code ="ca_objects.acquisition_year">Acquired: ^ca_objects.acquisition_year<br></ifdef}}}
 				{{{<ifdef code="ca_objects.measurementSet.measurements">^ca_objects.measurementSet.measurements (^ca_objects.measurementSet.measurementsType)</ifdef><ifdef code="ca_objects.measurementSet.measurements,ca_objects.measurementSet.measurements"></ifdef><ifdef code="ca_objects.measurementSet.measurements2">^ca_objects.measurementSet.measurements2 (^ca_objects.measurementSet.measurementsType2)</ifdef>}}}
 				
 				{{{<ifdef code="ca_objects.description">
