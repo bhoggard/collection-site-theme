@@ -17,3 +17,6 @@ H1, h1 {
   color: #333333;
 }
 
+H6, h6 {
+  text-transform: none;
+}
