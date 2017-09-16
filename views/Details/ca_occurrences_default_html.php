@@ -37,7 +37,7 @@
 								while($exh_res->nextHit()){
 									if($vs_media = $exh_res->getWithTemplate('<l>^ca_object_representations.media.large</l>', array("checkAccess" => $va_access_values))){
 										print "<li class='exhibit-slide'><div class='frontSlide exhibit-img'>".$vs_media;
-										$vs_caption = $exh_res->getWithTemplate("<l>^ca_objects.preferred_labels.name</l><br>^ca_objects.exhibitCaption");
+										$vs_caption = $exh_res->getWithTemplate("<l>^ca_objects.preferred_labels.name</l><br>^ca_entities.preferred_labels");
 										if($vs_caption){
 											print "<div class='frontSlideCaption'>".$vs_caption."</div>";
 										}
@@ -121,8 +121,13 @@
 			});
 		</script>
 
-					{{{<ifdef code="ca_occurrences.description"><br><br>^ca_occurrences.description<br/></ifdef>}}}
+<p>{{{^ca_occurrences.exhibition_dates}}}</p>
+					{{{<ifdef code="ca_occurrences.description">^ca_occurrences.description<br/></ifdef>}}}
 					{{{<ifcount code="ca_objects" min="1" max="1"><div class='unit'><unit relativeTo="ca_objects" delimiter=" "><l>^ca_object_representations.media.large</l><div class='caption'>Related Object: <l>^ca_objects.preferred_labels.name</l></div></unit></div></ifcount>}}}
+
+<br>
+<br>
+<br>
 
 <?php
 				# Comment and Share Tools
