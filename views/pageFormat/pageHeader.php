@@ -57,7 +57,6 @@
 	<link rel="shortcut icon" type="image/x-icon" href="/themes/hoggardwagner/assets/pawtucket/graphics/favicon.png" />
 	<?php print MetaTagManager::getHTML(); ?>
 	<?php print AssetLoadManager::getLoadHTML($this->request); ?>
-
 	<title><?php print (MetaTagManager::getWindowTitle()) ? MetaTagManager::getWindowTitle() : $this->request->config->get("app_display_name"); ?></title>
 	
 	<script type="text/javascript">
