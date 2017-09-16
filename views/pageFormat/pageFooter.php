@@ -36,7 +36,7 @@
 			</div>
 			<ul class="list-inline">
 				<li><?php print caNavLink($this->request, 'Copyright', '', '', 'About', 'Copyright'); ?></li>
-<li><a target="_blank" href="https://bhoggard.smugmug.com/Hoggard-Wagner-Collection/i-nfhZk7W">Installation Views</a></li>
+<li><a target="_blank" href="/About/InstallationViews">Installation Views</a></li>
 				<li><a href="http://hoggardwagner.us1.list-manage.com/subscribe?u=bc6adecb3dfc7a869bd831856&id=76672cc07f">Mailing List</a></li>
 			</ul>
 		</footer><!-- end footer -->
