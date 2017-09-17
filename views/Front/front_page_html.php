@@ -33,6 +33,19 @@
 ?>
 	<div class="row">
 		<div class="col-sm-8">
+<h1>Exhibition at Trestle Projets</h1>
+
+<strong>Tracing Trajectories: Selections from the Hoggard/Wagner Collection</strong>
+<br>
+Organized by Jesse Firestone
+<br>
+Opening Reception: September 23rd; 7–9M
+<br>
+On view: Sat + Sun; 1–6PM, September 24th – October 22nd
+<br>
+<a href="/Detail/occurrences/tracing-trajectories">more information</a>
+
+
 		</div><!--end col-sm-8-->
 		<div class="col-sm-4">
 <?php
