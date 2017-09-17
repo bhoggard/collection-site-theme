@@ -24,7 +24,7 @@
 				</div><!-- end col -->
 			</div><!-- end row -->
 			<div class="row">			
-				<div class='col-sm-10 col-sm-offset-1'>
+				<div class='col-sm-10'>
 <?php
 					$exh_res = $t_item->getRelatedItems('ca_objects', ['returnAs' => 'searchResult']);
 					if($exh_res && $exh_res->numHits()){
@@ -125,10 +125,6 @@
 					{{{<ifdef code="ca_occurrences.description">^ca_occurrences.description<br/></ifdef>}}}
 					{{{<ifcount code="ca_objects" min="1" max="1"><div class='unit'><unit relativeTo="ca_objects" delimiter=" "><l>^ca_object_representations.media.large</l><div class='caption'>Related Object: <l>^ca_objects.preferred_labels.name</l></div></unit></div></ifcount>}}}
 
-<br>
-<br>
-<br>
-
 <?php
 				# Comment and Share Tools
 				if ($vn_comments_enabled | $vn_share_enabled) {
@@ -157,8 +153,8 @@
 					{{{<ifcount code="ca_entities" min="2"><H6>Related people</H6></ifcount>}}}
 					{{{<unit relativeTo="ca_entities" delimiter="<br/>"><l>^ca_entities.preferred_labels.displayname</l></unit>}}}
 					
-					{{{<ifcount code="ca_occurrences.related" min="1" max="1"><H6>Related occurrence</H6></ifcount>}}}
-					{{{<ifcount code="ca_occurrences.related" min="2"><H6>Related occurrences</H6></ifcount>}}}
+					{{{<ifcount code="ca_occurrences.related" min="1" max="1"><H6>Related exhibition</H6></ifcount>}}}
+					{{{<ifcount code="ca_occurrences.related" min="2"><H6>Related exhibitions</H6></ifcount>}}}
 					{{{<unit relativeTo="ca_occurrences" delimiter="<br/>"><l>^ca_occurrences.related.preferred_labels.name</l></unit>}}}
 					
 					{{{<ifcount code="ca_places" min="1" max="1"><H6>Related place</H6></ifcount>}}}
