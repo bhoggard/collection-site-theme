@@ -5,6 +5,10 @@
   font-weight: bold;
 }
 
+.container {
+  padding-bottom: 20px;
+}
+
 /* Carousel Styles */
 #exhibit-carousel{
 	width: 800px !important;
@@ -40,7 +44,7 @@
 #exhibit-pagination a.active{
 	background-color: #fff;
 	text-shadow: none;
-	color: #0829DB;
+	color: #000000;
 	text-decoration: underline;
 }
 
