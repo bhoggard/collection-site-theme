@@ -72,3 +72,16 @@ H1, h1 {
 H6, h6 {
   text-transform: none;
 }
+
+.browse .btn, .sets .btn {
+  background-color: #0829DB;
+}
+
+.btn-default {
+  background-color: #0829DB;
+}
+
+.filterMenuFacetList li.active {
+  background-color: #0829DB;
+}
+
