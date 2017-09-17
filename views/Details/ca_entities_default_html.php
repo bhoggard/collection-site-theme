@@ -38,9 +38,9 @@
 					{{{<ifcount code="ca_entities.related" min="2"><H6>Related people</H6></ifcount>}}}
 					{{{<unit relativeTo="ca_entities_x_entities" delimiter="<br/>"><unit relativeTo="ca_entities" delimiter="<br/>"><l>^ca_entities.related.preferred_labels.displayname</l></unit> (^relationship_typename)</unit>}}}
 					
-					{{{<ifcount code="ca_occurrences" min="1" max="1"><H6>Related occurrence</H6></ifcount>}}}
-					{{{<ifcount code="ca_occurrences" min="2"><H6>Related occurrences</H6></ifcount>}}}
-					{{{<unit relativeTo="ca_entities_x_occurrences" delimiter="<br/>"><unit relativeTo="ca_occurrences" delimiter="<br/>"><l>^ca_occurrences.preferred_labels.name</l></unit> (^relationship_typename)</unit>}}}
+					{{{<ifcount code="ca_occurrences" min="1" max="1"><H6>Related exhibition</H6></ifcount>}}}
+					{{{<ifcount code="ca_occurrences" min="2"><H6>Related exhibitions</H6></ifcount>}}}
+					{{{<unit relativeTo="ca_entities_x_occurrences" delimiter="<br/>"><unit relativeTo="ca_occurrences" delimiter="<br/>"><l>^ca_occurrences.preferred_labels.name</l></unit></unit>}}}
 					
 					{{{<ifcount code="ca_places" min="1" max="1"><H6>Related place</H6></ifcount>}}}
 					{{{<ifcount code="ca_places" min="2"><H6>Related places</H6></ifcount>}}}
