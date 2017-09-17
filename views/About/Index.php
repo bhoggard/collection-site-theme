@@ -15,6 +15,13 @@
 <h3>The Collection</h3>
 <p>Hoggard and Wagner began collecting art as a couple in the mid 1990s, and some works were acquired by Wagner prior to their partnership. This web site is intended to publicize the collection and the artists within it. They have never sold a work of art from their collection and they do not intend to do so. Their hope is that this site will present it to a wider public than the relatively few people who are able to see it in a private home.</p>
 
+<h3>Exhibitions</h3>
+
+<ul>
+<li><a href="/Detail/occurrences/english-kills">Selections from the Hoggard Wagner Collection at English Kills Art Gallery</a> (2012)</li>
+<li><a href="/Detail/occurrences/tracing-trajectories">Tracing Trajectories: Selections from the Hoggard/Wagner Collection at Trestle Projects</a> (2017)</li>
+</ul>
+
 <h3>Acknowledgments</h3>
 <p>We would like to thank the interns who have helped us catalog our collection: Stephanie Korszen and Hannah Daly.</p>
 
