@@ -80,11 +80,9 @@
 							{{{<ifcount code="ca_places" min="1" max="1"><H6>Related place</H6></ifcount>}}}
 							{{{<ifcount code="ca_places" min="2"><H6>Related places</H6></ifcount>}}}
 							{{{<unit relativeTo="ca_objects_x_places" delimiter="<br/>"><unit relativeTo="ca_places"><l>^ca_places.preferred_labels</l></unit> (^relationship_typename)</unit>}}}
-						<!-- 	
-							{{{<ifcount code="ca_list_items" min="1" max="1"><H6>Related Term</H6></ifcount>}}}
-							{{{<ifcount code="ca_list_items" min="2"><H6>Related Terms</H6></ifcount>}}}
-							{{{<unit relativeTo="ca_objects_x_vocabulary_terms" delimiter="<br/>"><unit relativeTo="ca_list_items"><l>^ca_list_items.preferred_labels.name_plural</l></unit> (^relationship_typename)</unit>}}}
--->
+							{{{<ifcount code="ca_list_items" min="1" max="1"><H6>Tag</H6></ifcount>}}}
+							{{{<ifcount code="ca_list_items" min="2"><H6>Tags</H6></ifcount>}}}
+							{{{<unit relativeTo="ca_objects_x_vocabulary_terms" delimiter="<br/>"><unit relativeTo="ca_list_items"><l>^ca_list_items.preferred_labels.name_plural</l></unit></unit>}}}
 							
 						</div><!-- end col -->				
 						<div class="col-sm-6 colBorderLeft">
