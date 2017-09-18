@@ -24,104 +24,7 @@
 				</div><!-- end col -->
 			</div><!-- end row -->
 			<div class="row">			
-				<div class='col-sm-10'>
-<?php
-					$exh_res = $t_item->getRelatedItems('ca_objects', ['returnAs' => 'searchResult']);
-					if($exh_res && $exh_res->numHits()){
-?>
-						<div class="jcarousel-wrapper">
-							<!-- Carousel -->
-							<div id="exhibit-carousel" class="jcarousel">
-								<ul>
-<?php
-								while($exh_res->nextHit()){
-									if($vs_media = $exh_res->getWithTemplate('<l>^ca_object_representations.media.large</l>', array("checkAccess" => $va_access_values))){
-										print "<li class='exhibit-slide'><div class='frontSlide exhibit-img'>".$vs_media;
-										$vs_caption = $exh_res->getWithTemplate("<l>^ca_objects.preferred_labels.name</l><br>^ca_entities.preferred_labels");
-										if($vs_caption){
-											print "<div class='frontSlideCaption'>".$vs_caption."</div>";
-										}
-										print "</div></li>";
-										$vb_item_output = true;
-									}
-								}
-?>
-								</ul>
-						</div><!-- end jcarousel -->
-<?php
-						if($vb_item_output){
-?>
-							<!-- Prev/next controls -->
-							<a href="#" class="jcarousel-control-prev exhibit-prev"><i class="fa fa-angle-left"></i></a>
-							<a href="#" class="jcarousel-control-next exhibit-next"><i class="fa fa-angle-right"></i></a>
-		
-							<!-- Pagination -->
-							<p id="exhibit-pagination" class="jcarousel-pagination">
-							<!-- Pagination items will be generated in here -->
-							</p>
-<?php
-						}
-					}
-?>
-		</div><!-- end jcarousel-wrapper -->
-		<script type='text/javascript'>
-			jQuery(document).ready(function() {
-				/*
-				Carousel initialization
-				*/
-				$('.jcarousel')
-					.jcarousel({
-						// Options go here
-						wrap:'circular'
-					});
-		
-				/*
-				 Prev control initialization
-				 */
-				$('.jcarousel-control-prev')
-					.on('jcarouselcontrol:active', function() {
-						$(this).removeClass('inactive');
-					})
-					.on('jcarouselcontrol:inactive', function() {
-						$(this).addClass('inactive');
-					})
-					.jcarouselControl({
-						// Options go here
-						target: '-=1'
-					});
-		
-				/*
-				 Next control initialization
-				 */
-				$('.jcarousel-control-next')
-					.on('jcarouselcontrol:active', function() {
-						$(this).removeClass('inactive');
-					})
-					.on('jcarouselcontrol:inactive', function() {
-						$(this).addClass('inactive');
-					})
-					.jcarouselControl({
-						// Options go here
-						target: '+=1'
-					});
-		
-				/*
-				 Pagination initialization
-				 */
-				$('.jcarousel-pagination')
-					.on('jcarouselpagination:active', 'a', function() {
-						$(this).addClass('active');
-					})
-					.on('jcarouselpagination:inactive', 'a', function() {
-						$(this).removeClass('active');
-					})
-					.jcarouselPagination({
-						// Options go here
-					});
-			});
-		</script>
-
-<p>{{{^ca_occurrences.exhibition_dates}}}</p>
+				<div class='col-sm-6 col-md-6 col-lg-6'>
 					{{{<ifdef code="ca_occurrences.description">^ca_occurrences.description<br/></ifdef>}}}
 					{{{<ifcount code="ca_objects" min="1" max="1"><div class='unit'><unit relativeTo="ca_objects" delimiter=" "><l>^ca_object_representations.media.large</l><div class='caption'>Related Object: <l>^ca_objects.preferred_labels.name</l></div></unit></div></ifcount>}}}
 
@@ -153,8 +56,8 @@
 					{{{<ifcount code="ca_entities" min="2"><H6>Related people</H6></ifcount>}}}
 					{{{<unit relativeTo="ca_entities" delimiter="<br/>"><l>^ca_entities.preferred_labels.displayname</l></unit>}}}
 					
-					{{{<ifcount code="ca_occurrences.related" min="1" max="1"><H6>Related exhibition</H6></ifcount>}}}
-					{{{<ifcount code="ca_occurrences.related" min="2"><H6>Related exhibitions</H6></ifcount>}}}
+					{{{<ifcount code="ca_occurrences.related" min="1" max="1"><H6>Related occurrence</H6></ifcount>}}}
+					{{{<ifcount code="ca_occurrences.related" min="2"><H6>Related occurrences</H6></ifcount>}}}
 					{{{<unit relativeTo="ca_occurrences" delimiter="<br/>"><l>^ca_occurrences.related.preferred_labels.name</l></unit>}}}
 					
 					{{{<ifcount code="ca_places" min="1" max="1"><H6>Related place</H6></ifcount>}}}
@@ -162,7 +65,27 @@
 					{{{<unit relativeTo="ca_places" delimiter="<br/>"><l>^ca_places.preferred_labels.name</l></unit>}}}					
 				</div><!-- end col -->
 			</div><!-- end row -->
-		</div><!-- end container -->
+{{{<ifcount code="ca_objects" min="2">
+			<div class="row">
+				<div id="browseResultsContainer">
+					<?php print caBusyIndicatorIcon($this->request).' '.addslashes(_t('Loading...')); ?>
+				</div><!-- end browseResultsContainer -->
+			</div><!-- end row -->
+			<script type="text/javascript">
+				jQuery(document).ready(function() {
+					jQuery("#browseResultsContainer").load("<?php print caNavUrl($this->request, '', 'Search', 'objects', array('search' => 'occurrence_id:^ca_occurrences.occurrence_id'), array('dontURLEncodeParameters' => true)); ?>", function() {
+						jQuery('#browseResultsContainer').jscroll({
+							autoTrigger: true,
+							loadingHtml: '<?php print caBusyIndicatorIcon($this->request).' '.addslashes(_t('Loading...')); ?>',
+							padding: 20,
+							nextSelector: 'a.jscroll-next'
+						});
+					});
+					
+					
+				});
+			</script>
+</ifcount>}}}		</div><!-- end container -->
 	</div><!-- end col -->
 	<div class='navLeftRight col-xs-1 col-sm-1 col-md-1 col-lg-1'>
 		<div class="detailNavBgRight">
