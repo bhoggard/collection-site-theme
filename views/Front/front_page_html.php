@@ -33,7 +33,7 @@
 ?>
 	<div class="row">
 		<div class="col-sm-8">
-<h1>Exhibition at Trestle Projets</h1>
+<h1>Exhibition at Trestle Projects</h1>
 
 <strong>Tracing Trajectories: Selections from the Hoggard/Wagner Collection</strong>
 <br>
