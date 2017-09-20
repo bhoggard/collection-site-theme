@@ -30,6 +30,8 @@
 			<h6>&nbsp;</h6><address>Hoggard Wagner Art Collection<br>			255 West 23rd Street #2HE<br>			New York, NY 10011</address>
 		
 <p><a href="http://hoggardwagner.us1.list-manage.com/subscribe?u=bc6adecb3dfc7a869bd831856&id=76672cc07f">Mailing list</a></p>
+
+<p><a href="/About/Press">Press</a></p>
 			<address>
 Twitter<br>
 <a target="_blank" href="https://twitter.com/hoggardwagner">HoggardWagner</a>
